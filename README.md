@@ -29,6 +29,19 @@ Rollback to a specific migration
 Rollback to a blank, initial database
 `$ rails db:migrate VERSION=0`
 
+### Adding a foreign key to an existing table
+
+Generate a migration
+
+`$ rails g migration AddForeignKeyToTable`
+
+Add the foreign key and change the parent id column so it cannot be null
+
+`add foreign_key :parents, :childs`
+`change_column :childs, :parent_id, :integer, null :false`
+
+Run the migration
+
 ### Renaming a column
 
 First generate a migration
