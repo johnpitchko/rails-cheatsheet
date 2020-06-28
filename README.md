@@ -87,16 +87,16 @@ get 'chapters' => 'chapters#index', as :chapters
 
 If you generated the tests via `rails generate`, you must update the HTTP calls to include the ID of the parent. Also be sure to redirect to the appropriate page and include the necessary IDs
 
-``` 
+<pre> 
 test 'should create chapter' do
     assert_difference('Chapter.count') do
-      post(book_chapter_url(**book_: @chapter.book_id**),
+      post(book_chapter_url(<b>book_id: @chapter.book_id</b>),
            params: { chapter: { ... } })
     end
 
     assert_redirected_to book_chapters_url(@book)
   end
-```
+</pre>
 
 ## Miscellaenous
 
