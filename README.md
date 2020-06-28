@@ -74,11 +74,28 @@ Create an index of a nested resource ([StackOverflow](https://stackoverflow.com/
 
 routes.rb:
 ```
-resources :blog_post do
-  resources :comments
+resources :book do
+  resources :chapter
 end
 
-get 'comments' => 'comments#index', as :comments
+get 'chapters' => 'chapters#index', as :chapters
+```
+
+## Testing
+
+### Testing nested routes
+
+If you generated the tests via `rails generate`, you must update the HTTP calls to include the ID of the parent. Also be sure to redirect to the appropriate page and include the necessary IDs
+
+``` 
+test 'should create chapter' do
+    assert_difference('Chapter.count') do
+      post(book_chapter_url(**book_: @chapter.book_id**),
+           params: { chapter: { ... } })
+    end
+
+    assert_redirected_to book_chapters_url(@book)
+  end
 ```
 
 ## Miscellaenous
