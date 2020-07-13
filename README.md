@@ -67,6 +67,15 @@ end
 
 Run the migration (see above command)
 
+## Controllers
+
+### Permit parameters (example)
+
+```
+def underlying_params
+  params.fetch(:underlying).permit(:symbol, :description, :beta, :correlation)
+end
+```
 
 ## Views
 
