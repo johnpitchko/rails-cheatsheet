@@ -15,6 +15,14 @@ Show specific records
 Show errors after attempting to save an object (assume object name is t)
 `> t.errors`
 
+## Generator
+
+Create a scaffold (all the stuff you normally need) **note this is singular**
+`$ rails generate scaffold underlying`
+
+Rollback whatever you just generated
+`$ rails destroy scaffold underlying`
+
 ## Migrations
 
 Run all migrations
