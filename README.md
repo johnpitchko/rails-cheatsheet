@@ -118,3 +118,6 @@ test 'should create chapter' do
 ## Miscellaenous
 
 [Using enumerations in Rails](https://www.justinweiss.com/articles/creating-easy-readable-attributes-with-activerecord-enums/)
+
+### Editing they secret key file
+`EDITOR="atom --wait" rails credentials:edit`
