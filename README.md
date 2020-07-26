@@ -118,6 +118,9 @@ test 'should create chapter' do
 ## Debugging
 
 ### Prepend log messages with timestamp
+
+Add to `config/environment.rb`:
+
 ```
 class Logger
   def format_message(severity, timestamp, progname, msg)
