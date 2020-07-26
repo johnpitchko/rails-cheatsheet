@@ -115,6 +115,16 @@ test 'should create chapter' do
   end
 </pre>
 
+## Debugging
+
+### Prepend log messages with timestamp
+```
+class Logger
+  def format_message(severity, timestamp, progname, msg)
+    "#{timestamp} (#{$$}) #{msg}\n"
+  end
+end
+```
 ## Miscellaenous
 
 [Using enumerations in Rails](https://www.justinweiss.com/articles/creating-easy-readable-attributes-with-activerecord-enums/)
