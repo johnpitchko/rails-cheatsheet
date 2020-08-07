@@ -15,6 +15,23 @@ Show specific records
 Show errors after attempting to save an object (assume object name is t)
 `> t.errors`
 
+### Database Console
+
+Creating a new Rails app using the default configuration will use SQLite3 as the database. The database files are available in the `db` directory.
+
+There may be times where you want to access the raw database rather than working through ActiveRecord in the Rails console. To launch the SQLite3 console:
+
+```
+$ sqlite3 db/development.sqlite3
+```
+
+#### Common SQLite3 Console Commands
+
+`.exit` Quites the console
+`.database` Shows all databases in the current connection
+`.tables` Shows all tables in the databaase
+`.schema TABLE` Describe the structure/schema of the specified table
+
 ## Generator
 
 Create a scaffold (all the stuff you normally need) **note this is singular**
