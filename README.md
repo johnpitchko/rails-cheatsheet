@@ -32,7 +32,7 @@ $ sqlite3 db/development.sqlite3
 `.tables` Shows all tables in the databaase
 `.schema TABLE` Describe the structure/schema of the specified table
 
-## Generator
+## Generators
 
 Create a scaffold (all the stuff you normally need) **note this is singular**
 `$ rails generate scaffold underlying`
@@ -53,6 +53,23 @@ Rollback to a specific migration
 
 Rollback to a blank, initial database
 `$ rails db:migrate VERSION=0`
+
+### SQLite3 datatypes
+
+[Source](https://stackoverflow.com/questions/17918117/rails-4-list-of-available-datatypes)
+
+* :string - is for small data types such as a title
+* :text - is for longer pieces of textual data, such as a paragraph of information
+* :binary - is for storing data such as images, audio, or movies
+* :boolean - is for storing true or false values
+* :date - store only the date
+* :datetime - store both the date and time
+* :time - is for time only
+* :timestamp - for storing date and time into a column
+* :decimal - is for decimals (use for currency)
+* :float - is for decimals (use for scientific purposes)
+* :integer - is for whole numbers
+* :primary_key - unique key that can uniquely identify each row in a table
 
 ### Adding a foreign key to an existing table
 
